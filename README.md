@@ -9,6 +9,6 @@ To run the webpage click this link!
 ## Usage
 As mentioned the webpages intended purpose is to create a random and unique password for user once all criteria prompts are answered after clicking the "Generate Password" button.
 
-![Password Generator Webpage](./Assetes/images/screenshot.png)
+![Password Generator Webpage](./Assetes/images/screencapture-file-C-Users-dhann-Desktop-Bootcmap-Callenge-3-Luana-Paredes-index-html-2022-09-01-17_24_21.png)
 
 ## Credits
