@@ -1,13 +1,13 @@
-1// Assignment Code
+// Assignment Code added special characters
 var generateBtn = document.querySelector("#generate");
 var specialCharacters = "!@#$%^&*()";
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var password = randomPasswordGenerated();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -26,13 +26,16 @@ function generatePassword() {
 
   var special = confirm("Do you want special characters in your password?");
 
+  // minimum count for numbers, lower cases, upper cases and special characters
   var minimumCount = 0;  
 
+  // Empty minimums 
   var minimumNumbers = "";
   var minimumLowerCases = "";
   var minimumUpperCases = "";
   var minimumSpecialCharacters = "";
 
+    // Generator functions
   var functionArray = {
     getNumbers: function() {
       return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
@@ -52,6 +55,8 @@ function generatePassword() {
 
 };
 
+
+//make sure user selected ok for all and uses empty minimums
 if (numbers === true) {
   minimumNumbers = functionArray.getNumbers();
   minimumCount++;
@@ -76,8 +81,10 @@ if (special === true) {
 
 }
 
+ // empty string variable for the for loop 
 var randomPasswordGenerated = "";
 
+ // loop getting random characters
 for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
   var randomNumberPicked = Math.floor(Math.random() * 4);
 
@@ -85,6 +92,7 @@ for (let i = 0; i < (parseInt(passwordLength) - minimumCount); i++) {
 
 }
 
+  // characters are added to the password
 randomPasswordGenerated += minimumNumbers;
 randomPasswordGenerated += minimumLowerCases;
 randomPasswordGenerated += minimumUpperCases;
@@ -93,6 +101,7 @@ randomPasswordGenerated += minimumSpecialCharacters;
 return randomPasswordGenerated;
 
 }
+
 
 
 
