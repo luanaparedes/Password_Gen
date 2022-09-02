@@ -1,13 +1,13 @@
-1// Assignment Code added special characters
+// Assignment Code added special characters
 var generateBtn = document.querySelector("#generate");
 var specialCharacters = "!@#$%^&*()";
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var password = randomPasswordGenerated();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -35,7 +35,7 @@ function generatePassword() {
   var minimumUpperCases = "";
   var minimumSpecialCharacters = "";
 
-    // Generator functions**
+    // Generator functions
   var functionArray = {
     getNumbers: function() {
       return String.fromCharCode(Math.floor(Math.random() * 10 + 48));
@@ -54,6 +54,7 @@ function generatePassword() {
     }
 
 };
+
 
 //make sure user selected ok for all and uses empty minimums
 if (numbers === true) {
@@ -100,6 +101,7 @@ randomPasswordGenerated += minimumSpecialCharacters;
 return randomPasswordGenerated;
 
 }
+
 
 
 
